@@ -8,12 +8,6 @@
 
 import Foundation
 
-struct QuizQuestion {
-  let image: String
-  let text: String
-  let correctAnswer: Bool
-}
-
 struct QuizQuestionMock {
     static let questions: [QuizQuestion] = [
         QuizQuestion(image: "The Godfather", text: "Рейтинг этого фильма больше чем 6?", correctAnswer: true),

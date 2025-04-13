@@ -2,21 +2,6 @@ import UIKit
 import Foundation
 
 final class MovieQuizViewController: UIViewController {
-    struct QuizModel {
-      let image: UIImage
-      let question: String
-      let questionNumber: String
-    }
-    struct QuizStepModel {
-      let image: UIImage
-      let question: String
-      let questionNumber: String
-    }
-    struct QuizResultsModel {
-      let title: String
-      let text: String
-      let buttonText: String
-    }
     @IBOutlet weak private var textLabel: UILabel!
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var counterLabel: UILabel!
@@ -98,22 +83,26 @@ final class MovieQuizViewController: UIViewController {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = false
         noButton.isEnabled = false
+        yesButton.isEnabled = false
         
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.noButton.isEnabled = true
+            self.yesButton.isEnabled = true
         }
     }
     @IBAction private func yesButtonTapped(_ sender: UIButton) {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = true
         yesButton.isEnabled = false
+        noButton.isEnabled = false
             
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.yesButton.isEnabled = true
+            self.noButton.isEnabled = true
         }
     }
 }
