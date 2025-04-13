@@ -45,7 +45,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q24-eE-cX6" userLabel="Preview Image">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q24-eE-cX6" userLabel="Preview Image">
                                         <rect key="frame" x="0.0" y="43.5" width="374" height="561"/>
                                         <color key="backgroundColor" name="YP White (iOS)"/>
                                         <constraints>
@@ -78,7 +78,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="nobuttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Auh-JR-l4O"/>
+                                                    <action selector="nobuttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Vx-yR-p6t"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-bC-KQs" userLabel="Yes Button">
@@ -95,7 +95,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="yesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJV-i9-fQt"/>
+                                                    <action selector="yesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eg6-89-3PO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -119,7 +119,9 @@
                     <connections>
                         <outlet property="counterLabel" destination="0eh-41-ZrA" id="oHC-Oi-9Jh"/>
                         <outlet property="imageView" destination="q24-eE-cX6" id="Ufd-YH-Lg7"/>
+                        <outlet property="noButton" destination="Zfk-uk-T8a" id="XiP-CL-cZy"/>
                         <outlet property="textLabel" destination="Dc0-Xe-731" id="kiZ-5I-CWb"/>
+                        <outlet property="yesButton" destination="GRE-bC-KQs" id="KiT-hK-z7h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
