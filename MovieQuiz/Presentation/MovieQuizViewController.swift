@@ -79,10 +79,10 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     private func showNextQuestionOrResults() {
             if currentQuestionIndex == questionsAmount - 1 {
                 statisticService.store(correct: correctAnswers, total: questionsAmount)
-                let currentResult  = "Текущий результат: \(correctAnswers)/\(questionsAmount)"
-                let gamesAmount    = "Количество сыгранных квизов за всё время: \(statisticService.gamesCount)"
+                let currentResult  = "Ваш результат: \(correctAnswers)/\(questionsAmount)"
+                let gamesAmount    = "Количество сыгранных квизов: \(statisticService.gamesCount)"
                 let best         = statisticService.bestGame
-                let record   = "Лучший результат!: \(best.correct)/\(best.total) (\(best.date.dateTimeString))"
+                let record   = "Рекорд: \(best.correct)/\(best.total) (\(best.date.dateTimeString))"
                 let accuracy     = String(format: "%.2f", statisticService.totalAccuracy)
                 let accuracyPercentage = "Средняя точность: \(accuracy)%"
                 let listOfData = [currentResult, gamesAmount, record, accuracyPercentage].joined(separator: "\n")
