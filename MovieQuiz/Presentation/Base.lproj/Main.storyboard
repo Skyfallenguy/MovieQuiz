@@ -12,7 +12,7 @@
         <array key="YS Display-Bold.ttf">
             <string>YSDisplay-Bold</string>
         </array>
-        <array key="YS Display-Medium 3.ttf">
+        <array key="YS Display-Medium.ttf">
             <string>YSDisplay-Medium</string>
         </array>
     </customFonts>
@@ -106,17 +106,23 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="b8E-Au-Eqe">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Background (iOS)"/>
                         <constraints>
+                            <constraint firstItem="b8E-Au-Eqe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dw-0m-clv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DIx-YA-kqF" secondAttribute="bottom" id="eod-He-dye"/>
                             <constraint firstItem="DIx-YA-kqF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="jem-K5-oOb"/>
+                            <constraint firstItem="b8E-Au-Eqe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="luF-tF-5MC"/>
                             <constraint firstItem="DIx-YA-kqF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xcm-LK-eHR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIx-YA-kqF" secondAttribute="trailing" constant="20" id="zBQ-Bg-xwf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="b8E-Au-Eqe" id="ejY-c8-odh"/>
                         <outlet property="counterLabel" destination="0eh-41-ZrA" id="oHC-Oi-9Jh"/>
                         <outlet property="imageView" destination="q24-eE-cX6" id="Ufd-YH-Lg7"/>
                         <outlet property="noButton" destination="Zfk-uk-T8a" id="XiP-CL-cZy"/>
