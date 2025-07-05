@@ -70,7 +70,7 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
             message: message,
             preferredStyle: .alert)
 
-            let action = UIAlertAction(title: "Попробовать ещё раз",
+            let action = UIAlertAction(title: "Сыграть ещё раз",
             style: .default) { [weak self] _ in
                 guard let self = self else { return }
 
